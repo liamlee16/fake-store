@@ -13,10 +13,13 @@ export default function Home() {
     <MainLayout>
       <div className="w-full h-screen overflow-hidden grid grid-cols-6">
         <Sidebar />
-        <div className="col-span-5 overflow-auto">
-          <div className="mx-auto">
+        <div className="col-span-5 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 scrollbar-thumb-rounded">
+          <div className="mx-auto w-full">
             <Carousel />
             <Banner />
+            <ProductList />
+            <ProductList />
+            <ProductList />
             <ProductList />
             <Footer />
           </div>

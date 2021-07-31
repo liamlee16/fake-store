@@ -1,3 +1,4 @@
+import { Container } from "@chakra-ui/react";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -22,28 +23,30 @@ function CarouselComponent() {
   ];
 
   return (
-    <div className="border-b mb-8">
-      <Carousel
-        showArrows={true}
-        swipeable={true}
-        emulateTouch={true}
-        showStatus={false}
-        thumbWidth={150}
-        autoPlay
-        className="h-full w-full"
-        onClickItem={(index, item) => {
-          window.open("https://google.com");
-        }}
-      >
-        {images.map((image) => {
-          return (
-            <div>
-              <img className="cursor-pointer" src={image.url} alt="" />
-            </div>
-          );
-        })}
-      </Carousel>
-    </div>
+    <Container className="mb-8" maxW="container.xl">
+      <div className="border-b mb-8 w-full box-border">
+        <Carousel
+          showArrows={true}
+          swipeable={true}
+          emulateTouch={true}
+          showStatus={false}
+          thumbWidth={150}
+          autoPlay
+          className="h-full w-full"
+          onClickItem={(index, item) => {
+            window.open("https://google.com");
+          }}
+        >
+          {images.map((image) => {
+            return (
+              <div>
+                <img className="cursor-pointer" src={image.url} alt="" />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
+    </Container>
   );
 }
 

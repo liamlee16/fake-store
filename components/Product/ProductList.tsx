@@ -24,6 +24,10 @@ function ProductList() {
 
   return (
     <Container className="mb-8" maxW="container.xl">
+      <div className="flex items-center justify-between mb-4">
+        <p className="uppercase font-bold">Sản phẩm nổi bật</p>
+        <a href="#">Xem thêm</a>
+      </div>
       <SimpleGrid columns={4} spacing={10}>
         {products.map((product) => {
           return <ProductItem product={product} />;
