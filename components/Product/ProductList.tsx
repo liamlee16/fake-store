@@ -1,6 +1,7 @@
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import ProductItem from "./ProductItem";
+import Link from "next/link";
 
 function ProductList() {
   const products = [
@@ -26,7 +27,7 @@ function ProductList() {
     <Container className="mb-8" maxW="container.xl">
       <div className="flex items-center justify-between mb-4">
         <p className="uppercase font-bold">Sản phẩm nổi bật</p>
-        <a href="#">Xem thêm</a>
+        <Link href="/categories/detail">Xem thêm</Link>
       </div>
       <SimpleGrid columns={4} spacing={10}>
         {products.map((product) => {
